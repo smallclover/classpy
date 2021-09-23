@@ -3,7 +3,7 @@ subprojects {
     group = 'classpy'
 
     repositories {
-        jcenter()
+        mavenCentral()
     }
 
     plugins.withType(JavaPlugin).configureEach {
@@ -17,12 +17,12 @@ subprojects {
         // options.compilerArgs += '--enable-preview'
     }
     tasks.withType(JavaExec) {
-        jvmArgs += '--enable-preview'
+        //jvmArgs += '--enable-preview'
         // jvmArgs += '-XX:+ShowCodeDetailsInExceptionMessages'
     }
 
     tasks.withType(Test).configureEach {
-        jvmArgs += "--enable-preview"
+        //jvmArgs += "--enable-preview"
         useJUnitPlatform()
     }
 }
